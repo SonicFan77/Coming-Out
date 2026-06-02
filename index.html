@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Protected Image</title>
+    <style>
+        body {
+            font-family: "Comic Sans MS", cursive;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        #imageContainer {
+            display: none;
+        }
+
+        img {
+            max-width: 90%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Unlock</h2>
+
+    <input type="password" id="passwordInput" placeholder="Password">
+    <button onclick="checkPassword()">Unlock</button>
+
+    <div id="imageContainer">
+        <h3>Congrats</h3>
+        <img src="IMG_4341.jpg" alt="Protected Image">
+    </div>
+
+    <script>
+        function checkPassword() {
+            const password = document.getElementById("passwordInput").value;
+
+            if (password === "M1STur_eRecT!0N") {
+                document.getElementById("imageContainer").style.display = "block";
+            } else {
+                alert("TRY AGAIN LOL");
+            }
+        }
+    </script>
+
+</body>
+</html>
